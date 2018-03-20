@@ -1,0 +1,23 @@
+<!DOCTYPE html> {{> head}}
+
+<body class="socotec">
+  <section class="main-content">
+      {{partial "main-header" title="SOCOTEC" portail="true"}} 
+    <div class="blue-band">
+      {{> main-menu}}
+    </div>
+
+    <main>
+      <section class="sub-content">
+          {{> form-user-title}}
+          {{> form-contrat-add-title}}
+          {{> form-criteria-title}}
+      
+      </section>
+    </main>
+  </section>
+  {{!-- {{> main-footer}}  --}}
+  {{> foot}}
+</body>
+
+</html>

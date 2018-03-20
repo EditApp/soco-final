@@ -1,0 +1,90 @@
+.blue-band {
+    background-color: $blue;
+    min-height: 88px;
+
+    nav > ul {
+        border-right: 1px solid $white;
+        align-items: stretch;
+        align-content: stretch;
+        position: relative;
+
+        & > li {
+            display: inline-flex;
+            align-items: stretch;
+            align-content: stretch;
+
+            ul {
+                display: none;
+                height: 57px;
+            }
+
+            &:hover {
+                a {
+                    background-color: $blue-dark;
+                }
+
+                ul {
+                    display: inline-flex;
+                    position: absolute;
+                    top: 88px;
+                    z-index: 1;
+                    right: 0;
+
+                    li {
+                        padding: 0;
+
+                        a {
+                            color: $blue-dark;
+                            background-color: $blue-sail;
+                            line-height: 57px;
+                            font-size: 1.5rem;
+
+                            span {
+                                width: 22px;
+                                height: 26px;
+                                top: 6px;
+                            }
+
+                            &:hover {
+                                color: $white;
+                                background-color: $blue-jordy;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    span {
+        width: 30px;
+        position: relative;
+        height: 39px;
+        display: inline-block;
+        top: 17px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+
+        &.icone-search {
+            background-image: url('../images/icons/icone-search.svg');
+        }
+
+        &.icone-camembert {
+            background-image: url('../images/icons/icone-camembert.svg');
+        }
+
+        &.icone-engrenage {
+            background-image: url('../images/icons/icone-engrenage.svg');
+        }
+    }
+
+    a {
+        font-family: 'Roboto-Bold', 'Arial', sans-serif;
+        line-height: 88px;
+        padding: 0px 22px 0px 10px;
+        font-size: $font-optim;
+        border-left: 1px solid $white;
+        flex: auto;
+    }
+}

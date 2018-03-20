@@ -1,0 +1,28 @@
+<!DOCTYPE html> {{> head}}
+
+<body class="socotec">
+  <section class="main-content">
+
+      {{partial "main-header" title="SOCOTEC" portail="true"}} 
+ 
+    <div class="blue-band">
+      {{> main-menu}}
+    </div>
+
+    <main>
+      <section class="sub-content">
+        <article class="content">
+          <h1>Détails du contrat</h1>
+           {{> main-content-title-text}}
+        </article>
+        <div class="bloc-blue">
+          <h2 class="h2-titles"><span class="icon icone-doc-attach "></span>Documenrs arrachés</h2>
+          {{> main-content-doc-color-table}}
+        </div>
+      </section>
+    </main>
+  </section>
+  {{> foot}}
+</body>
+
+</html>

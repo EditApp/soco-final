@@ -1,0 +1,217 @@
+/*************************************************/
+/*-------------------- MIXINS -------------------*/
+/*************************************************/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow ($x, $y, $blur, $spread, $color, $direction: false) {
+  @if ($direction != false) { 
+    -webkit-box-shadow: $x $y $blur $spread $color inset;
+       -moz-box-shadow: $x $y $blur $spread $color inset;
+         -o-box-shadow: $x $y $blur $spread $color inset;
+            box-shadow: $x $y $blur $spread $color inset;
+  } @else {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+       -moz-box-shadow: $x $y $blur $spread $color;
+         -o-box-shadow: $x $y $blur $spread $color;
+            box-shadow: $x $y $blur $spread $color;
+  }
+}
+
+@mixin text-shadow ($x, $y, $blur, $color) {
+    -webkit-text-shadow: $x $y $blur $color;
+       -moz-text-shadow: $x $y $blur $color;
+         -o-text-shadow: $x $y $blur $color;
+            text-shadow: $x $y $blur $color;
+}
+
+@mixin scale($var) {
+  -moz-transform: scale($var);
+  -webkit-transform: scale($var);
+  -o-transform: scale($var);
+  transform: scale($var);
+}
+
+@mixin transform-translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+     -moz-transform: translate($x, $y);
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+@mixin transform-rotate($deg) {
+  -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+      -ms-transform: rotate($deg); /* IE 9 */
+          transform: rotate($deg);
+}
+
+@mixin background-degrade1($first, $second) {
+  background-color: $first;
+  background-image: -moz-linear-gradient(-30deg,  $first 0%,  $second 100%);
+  background-image: -webkit-linear-gradient(-30deg,  $first 0%, $second 100%);
+  background-image: linear-gradient(120deg,  $first 0%, $second 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=1 );
+}
+@mixin background-degrade2($first, $second) {
+  background-color: $first;
+  background-image: -moz-linear-gradient(top, $first 0%, $second 100%);
+	background-image: -webkit-linear-gradient(top, $first 0%, $second 100%);
+	background-image: linear-gradient(to bottom, $first 0%, $second 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=1 );
+}
+
+@mixin blur($var) {
+  filter: blur($var);
+  -webkit-filter: blur($var);
+  -moz-filter: blur($var);
+  -o-filter: blur($var);
+  -ms-filter: blur($var);
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+}
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin temp-border {
+  border: 1px solid #5a5a5a;
+}
+@mixin button-flat-style {
+  text-transform: uppercase;
+  color: $white;
+  border:0px;
+}
+@mixin link-style-reset {
+  color: $black;
+  text-decoration: underline;
+  // &:hover,
+  // &:active {
+  //   text-decoration: none;
+  // }
+}
+@mixin button-reset {
+  background: none;
+    border: 0px solid transparent;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+
+@mixin border-reset {
+
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+@mixin icon-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@mixin icon-mes-prospects {
+  background-image: url('../images/icons/icone-mes-prospects.svg');
+  background-size: 50%;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+@mixin icon-devis {
+  background-image: url('../images/icons/icone-devis.svg');
+}
+
+@mixin icon-commandes {
+  background-image: url('../images/icons/icone-commandes.svg');
+}
+
+@mixin icon-commandes-purple {
+  background-image: url('../images/icons/icone-commandes-purple.svg');
+}
+
+
+@mixin icon-contact-bk {
+  background-image: url('../images/icons/icone-contact-bk.svg');
+}
+
+@mixin icon-croix {
+  background-image: url('../images/icons/action-icons/croix.svg');
+}
+
+@mixin icon-crayon {
+  background-image: url('../images/icons/action-icons/icone-crayon.svg');
+}
+
+@mixin icon-done {
+  background-image: url('../images/icons/action-icons/icone-done.svg');
+}
+
+@mixin icon-planifie {
+  background-image: url('../images/icons/action-icons/icone-planifie.svg');
+}
+
+@mixin icon-refuse {
+  background-image: url('../images/icons/action-icons/icone-refuse.svg');
+}
+
+@mixin icon-relaise {
+  background-image: url('../images/icons/action-icons/icone-relaise.svg');
+}
+
+@mixin icon-sablier {
+  background-image: url('../images/icons/action-icons/icone-sablier.svg');
+}
+
+@mixin icon-telecharger {
+  background-image: url('../images/icons/action-icons/icone-telecharger.svg');
+}
+
+@mixin icon-valide {
+  background-image: url('../images/icons/action-icons/icone-valide.svg');
+}
+
+@mixin icon-chevron {
+  background-image: url('../images/icons/action-icons/fa-angle-down.svg');
+}
+
+@mixin icone-doc-attach {
+  background-image: url('../images/icons/action-icons/icone-doc-attach.svg');
+}
+
+@mixin icone-chart-bar{
+  background-image: url('../images/icons/icone-chart-bar.svg');
+}
+
+@mixin icone-gestion{
+  background-image: url('../images/icons/icone-gestion.svg');
+}
+
+@mixin icone-gestion-contrats{
+  background-image: url('../images/icons/icone-gestion-contrats.svg');
+}
+
+@mixin icone-export{
+  background-image: url('../images/icons/icone-export.svg');
+}

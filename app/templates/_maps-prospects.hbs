@@ -1,0 +1,41 @@
+<article id="maps">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="line-view-push"></button>
+            <button class="grid-view-push"></button>
+            <span>
+                <span class="blue title">250</span> Prospets trouvés
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 map-modules grid-view">
+            <div class="custom-form">
+                <select class="custom-select mr-sm-2 blue type-changer">
+                    <option selected="">Tous les types</option>
+                    <option value="devis">Devis</option>
+                    <option value="rdv">Rendez-vous</option>
+                    <option value="commande">Commande</option>
+                </select>
+            </div>
+            {{partial "map-module-prospects" lat="48.877803" lng="2.318393" type="devis"}}
+            {{partial "map-module-prospects" lat="48.869258" lng="2.360110" type="rdv"}}
+            {{partial "map-module-prospects" lat="48.876379" lng="2.391001" type="commande"}}
+            {{partial "map-module-prospects" lat="48.861217" lng="2.364234" type="commande"}}
+            {{partial "map-module-prospects" lat="48.840970" lng="2.330073" type="commande"}}
+            {{partial "map-module-prospects" lat="48.884222" lng="2.342776" type="rdv"}}
+            {{partial "map-module-prospects" lat="48.836111" lng="2.287673" type="devis"}}
+            {{partial "map-module-prospects" lat="48.830178" lng="2.237290" type="commande"}}
+            {{partial "map-module-prospects" lat="48.889061" lng="2.215074" type="rdv"}}
+            {{partial "map-module-prospects" lat="48.917705" lng="2.299920" type="rdv"}}
+            {{partial "map-module-prospects" lat="48.944739" lng="2.380397" type="commande"}}
+            {{partial "map-module-prospects" lat="48.883317" lng="2.428884" type="commande"}}
+            {{partial "map-module-prospects" lat="48.803954" lng="2.387312" type="devis"}}
+        </div>
+        <div class="col-sm-8">
+            {{> google-map}}
+        </div>
+    </div>
+
+
+</article>

@@ -1,0 +1,280 @@
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/roboto/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/roboto/Roboto-Light.ttf');
+}
+
+
+html {
+  font-size: 10px;
+} 
+
+body.socotec {
+  font-family: 'Roboto-Regular', 'Arial', sans-serif;
+  font-size: $font-normal;
+  line-height: $line-height-normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//structure
+* {
+  box-sizing: border-box;
+}
+
+
+.flexbox-model-block {
+  display: -webkit-flex;
+  display:         flex;
+  div,
+  li{
+    display: inline-flex;
+    flex: auto;
+  }
+
+}
+//structure bloc center
+.main-content {
+  margin: 0 auto;
+}
+.sub-content {
+  max-width: 1169px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.full-content {
+  padding: 0 20px;
+
+  &.map-container{
+    padding: 0 0 0 20px;
+  }
+}
+
+
+//textes et ctyle des elements
+
+.white-text-block {
+  p, span, li, a {
+    color: $white;
+    text-transform: uppercase;
+  }
+  a:hover {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      background-color: $blue-dark;
+    }
+  }
+}
+
+//template title text
+body {
+  dl, ol, ul {
+    //anti reboot de bootstrap
+    margin-top: 0;
+    margin-bottom: 0rem;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0;
+  }
+  h1 {
+    font-family: 'Roboto-Bold', 'Arial', sans-serif;
+    color: $blue-dark;
+    text-align: center;
+    font-size: $font-big;
+    margin: 51px 0;
+    font-weight: 600;
+  }
+  p {
+    font-size:  $font-normal;
+    line-height: $line-height-normal;
+
+  }
+}
+.center {
+  margin: 0 auto;
+}
+
+body .border-bottom{
+  border-bottom: 2px solid $grey-light!important;
+}
+
+//ICONS
+.icon {
+  @include icon-background ;
+}
+
+.icon-mes-prospects {
+  @include icon-mes-prospects;
+}
+.icon-commandes {
+  @include icon-commandes;
+}
+
+.icon-commandes-purple {
+  @include icon-commandes-purple;
+}
+.icon-devis {
+  @include icon-devis;
+}
+.icon-contact-bk {
+  @include icon-contact-bk;
+}
+
+.icone-doc-attach {
+  @include icone-doc-attach;
+}
+
+.icone-chart-bar{
+  @include icone-chart-bar
+}
+
+.icone-gestion{
+  @include icone-gestion
+}
+
+.icone-gestion-contrats{
+  @include icone-gestion-contrats
+}
+
+.icone-export{
+  @include icone-export
+}
+
+//icons small
+
+.icon-small {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  background-size: contain;
+  background-position: center center;
+  background-size: 42%;
+}
+.icon-croix  {
+  @include icon-croix;
+  background-size: 54%;
+}
+.icon-crayon  {
+  @include icon-crayon;
+}
+.icon-done  {
+  @include icon-done;
+  background-size: 100%;
+}
+.icon-planifie  {
+  @include icon-planifie;
+  background-size: 100%;
+}
+.icon-refuse  {
+  @include icon-refuse;
+  background-size: 60%;
+}
+.icon-realise  {
+  @include icon-relaise;
+  background-size: 100%;
+}
+.icon-sablier  {
+  @include icon-sablier;
+
+}
+.icon-telecharger  {
+  @include icon-telecharger;
+  background-size: 60%;
+}
+.icon-valide  {
+  @include icon-valide;
+  background-size: 60%;
+}
+
+//backgrounds 
+
+.bg-lightgrey {
+  background-color:$ivory;
+  padding: 20px;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 30px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+//titles & textes
+
+.h2-titles {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto-Bold', 'Arial', sans-serif;
+  font-size: $font-medium;
+  line-height: $line-height-medium;
+  margin-bottom: 35px;
+  font-weight: 600;
+  .icon {
+      display: inline-block;
+      min-width: 50px;
+      height: 50px;
+      margin-right: 10px;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+//buttons 
+a {
+  font-weight: 600;
+  &.add {
+    padding: 10px 18px;
+    @include button-flat-style;
+    border:0px;
+    font-size: $font-optim;
+    &:before {
+      content: '+';
+      font-size: 30px;
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+    }
+  }
+  
+}
+
+.button-full.strawberry {
+  background-color: $strawberry;
+ @include button-flat-style;
+ font-size: $font-small;
+  padding: 8px 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+///content
+
+.content {
+  padding-bottom: 40px;
+}
+
+
+.blue.title{
+  color : $blue;
+  font-weight: 600;
+  font-size: $font-optim;
+}

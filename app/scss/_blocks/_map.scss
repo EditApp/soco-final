@@ -1,0 +1,288 @@
+#map {
+
+  height: 800px;
+}
+  //buttons
+  .line-view-push,
+  .grid-view-push {
+    width: 30px;
+    height: 30px;
+   @include button-reset;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   background-repeat: no-repeat; 
+  }
+
+  .line-view-push {
+    background-image: url('../images/icons/list-grey.svg');
+    background-size: contain;
+    background-position: center;
+
+    &:focus {
+      background-image: url('../images/icons/list-blue.svg');
+      outline : 0px auto -webkit-focus-ring-color;
+    }
+  }
+  .grid-view-push {
+    background-image: url('../images/icons/grid-grey.svg');
+    background-size: contain;
+    background-position: center;
+
+    &:focus {
+      background-image: url('../images/icons/grid-blue.svg');
+      outline : 0px auto -webkit-focus-ring-color;
+    }
+  }
+
+  #maps {
+  border-top: 3px solid $blue-dark;
+  padding-top: 20px;
+
+  .map-modules {
+    padding: 0!important;
+    min-width: 409px;
+    height: 800px;
+    overflow-y: auto;
+
+    .custom-form {
+      margin: 0 10px 10px 5px;
+
+      select {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    .map-module {
+      &.active, &.hover {
+        background-color: #f4f4f4;
+      }
+
+      .type {
+        margin: 10px -10px -10px;
+        padding: 0 10px;
+        color: #ffffff;
+        font-size: 1.5rem;
+        align-items: center;
+        justify-content: center;
+
+        &.rdv {
+          background-color: $turquois;
+        }
+        &.commande {
+          background-color: $strawberry;
+        }
+        &.devis {
+          background-color: $orange;
+        }
+
+        .icon {
+          position: relative;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-right: 5px;
+
+          &.icon-rdv {
+            background-image: url('../images/icons/icone-rdv.svg');
+            width: 18px;
+            height: 17px;
+          }
+
+          &.icon-commande {
+            background-image: url('../images/icons/icone-commande.svg');
+            width: 16px;
+            height: 17px;
+          }
+
+          &.icon-devis {
+            background-image: url('../images/icons/icone-devis.svg');
+            width: 15px;
+            height: 17px;
+          }
+        }
+      }
+    }
+
+    &.grid-view {
+      .module {
+        box-sizing: border-box;
+        width: 47%;
+        flex-direction: column;
+        display: flex;
+        float: left;
+        margin: 0 5px 10px 5px;
+      }
+      .block-buttons{
+        flex-direction: row;
+        .blue {
+           margin-right: 5px;
+           margin-bottom: 0px;
+        }
+        
+      }
+    }
+    &.line-view {
+      .block-buttons{
+        flex-direction: column;
+        order: 2;
+        .blue {
+           margin-right: 0px;
+           margin-bottom: 5px;
+        }
+
+        a {
+          line-height: 3.5rem;
+        }
+      }
+
+      .data {
+        order: 1;
+      }
+
+      .type {
+        order: 0;
+        margin: -10px 10px -10px -10px;
+        flex-direction: column;
+        width: 47px;
+
+        .icon {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+.module {
+  border: 1px solid $grey-light;
+  padding: 10px;
+  margin-bottom: 20px;
+  &.map-infowindow {
+    border-width: 0px;
+    overflow: hidden;
+    margin: 0px;
+    width: 264px;
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    position: relative;
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: url('../images/icons/icone-croix.svg');
+      background-size: contain;
+      width: 18px;
+      height: 18px;
+    }
+
+    .data {
+      flex: 1;
+    }
+
+    .block-buttons {
+      flex-direction: row;
+      display: flex;
+      height: 34px;
+      margin: 20px 0;
+
+      a {
+        font-size: $font-normal-min;
+        display: inline;
+        padding: 9px 0;
+        margin-right: 5px;
+      }
+    }
+
+    .type {
+      margin: 0 -20px -20px;
+      padding: 5px 20px;
+      color: #ffffff;
+      font-size: 1.5rem;
+      align-items: center;
+      justify-content: flex-start;
+      display: flex;
+
+      &.rdv {
+        background-color: $turquois;
+      }
+      &.commande {
+        background-color: $strawberry;
+      }
+      &.devis {
+        background-color: $orange;
+      }
+
+      .icon {
+        position: relative;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 5px;
+
+        &.icon-rdv {
+          background-image: url('../images/icons/icone-rdv.svg');
+          width: 18px;
+          height: 17px;
+        }
+
+        &.icon-commande {
+          background-image: url('../images/icons/icone-commande.svg');
+          width: 16px;
+          height: 17px;
+        }
+
+        &.icon-devis {
+          background-image: url('../images/icons/icone-devis.svg');
+          width: 15px;
+          height: 17px;
+        }
+      }
+    }
+  }
+  p.blue {
+    color : $blue;
+    font-weight: 600;
+    font-size: $font-optim;
+  }
+  p {
+    line-height: $line-height-small;
+  }
+
+  a {
+    @include button-reset;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    font-size: $font-small;
+    padding:  3px 5px;
+    &:hover {
+      text-decoration: none;
+    }
+    &.green {
+      @include button-bg($green);
+    }
+    &.blue {
+      @include button-bg($blue);
+    }
+    &.blue-sky {
+      @include button-bg($blue-sky);
+    }
+  }
+  .block-buttons,
+  .data {
+    flex-direction: column;
+  }
+  
+}
+
+.prospects #maps {
+  border-top: 2px solid $grey-ultralight;
+}

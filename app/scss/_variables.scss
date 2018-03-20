@@ -1,0 +1,51 @@
+/******* Liste des variables SCSS ********/
+//monochromatic
+$white: #ffffff;
+$ivory : #f9f9f9;
+$grey-ultralight: #dadada;
+$grey-light: #cccccc;
+$grey: #adadad;
+$grey-semi : #999999;
+$grey-medium : #737373;
+$graphit: #1e1e1c;
+$black: #000000;
+
+//blues
+$blue-light: #b3daf5;
+$blue-medium: rgba(0, 130, 222, 0.3);
+$blue: rgba(0, 130, 222, 1);
+$blue-dark: #005499;
+$blue-sky: #00ace8;
+$blue-jordy: #7cbfee;
+$blue-sail: #b2d9f5;
+$purple: #6856a0;
+
+//punchies
+$strawberry : #ff4b6b;
+$orange: #ff6533;
+
+//greenies
+$turquois : #42c8be;
+$green : #a9c409;
+
+
+$font-big : 3rem;
+$font-medium : 2rem;
+$font-optim : 1.75rem;
+$font-normal : 1.5rem;
+$font-normal-min : 1.2rem;
+$font-small: 1rem; 
+
+//for font small
+$line-height-small: 1.5rem;
+
+
+//for font medium
+$line-height-medium: 2.2rem;
+
+//for font normal
+$line-height-normal: 2.5rem;
+
+$line-height-3-5rem: 3.5rem;
+
+$transition: all 0.3s ease;
