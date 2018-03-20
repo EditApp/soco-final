@@ -1,0 +1,27 @@
+{
+  "name": "Webnet-poesie",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "browser-sync-brunch": "0.0.9",
+    "brunch": "^2.10.12",
+    "css-brunch": "^2.10.0",
+    "handlebars-brunch": "^2.10.0",
+    "javascript-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2.10.0",
+    "sass-brunch": "brunch/sass-brunch#master"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "chart.js": "^2.7.2",
+    "jquery": "^3.3.1",
+    "js-info-bubble": "^0.8.0",
+    "static-handlebars-brunch": "^0.1.5",
+    "svgxuse": "^1.2.6",
+    "jquery-validation" : "^1.17.0"
+  },
+  "scripts": {
+    "start": "brunch watch --server"
+  }
+}
