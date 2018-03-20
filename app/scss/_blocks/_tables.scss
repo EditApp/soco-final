@@ -1,0 +1,94 @@
+table.table {
+    margin-bottom: 50px;
+    font-size: $font-optim;
+    .head {
+        color: $white;
+        font-size:$font-small; 
+        text-transform: uppercase;
+        font-weight: 600;
+        tr > td {
+            font-size : $font-normal-min;
+            padding: 15px 22px ;
+
+        }
+    }
+    .state-content {
+        display: inline-flex;
+        align-items: center;
+    }
+    tr > td {
+       
+        padding: 10px 22px ;
+        // width: 99px;
+        border-right: 1px solid $white;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 0px solid transparent;
+        font-size : $font-normal;
+        vertical-align: middle;
+        a {
+            @include link-style-reset;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+    .action:nth-child(even) {
+        background:rgba(255,255,255, 0.75);
+    }
+    .action:nth-child(odd) {
+        background:rgba(255,255,255, 0.6);
+    }
+}
+
+
+
+.bloc-turquois {
+    .table,
+    .add {
+        background-color: $turquois;
+    }
+}
+
+.bloc-orange {
+    .table,
+    .add {
+        background-color:$orange;
+    }
+}
+.bloc-strawberry {
+    .table,
+    .add {
+    background-color:$strawberry;
+    }
+}
+.bloc-purple {
+    .table,
+    .add {
+    background-color:$purple;
+    }
+}
+.bloc-blue {
+    .table,
+    .add {
+    background-color:$blue;
+    }
+}
+
+.bloc-turquois,
+.bloc-orange,
+.bloc-strawberry,
+.bloc-purple,
+.bloc-blue {
+    position: relative;
+    padding-top: 70px;
+    border-top: 2px solid $grey-light;
+    .add {
+        position: absolute;
+        right: 0;
+        top: 70px;
+      }
+}
+
+
+

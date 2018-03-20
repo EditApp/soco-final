@@ -1,0 +1,66 @@
+.socotec {
+  .modal{ 
+    max-width: 100%;
+    .modal-body {
+      @include border-reset;
+      padding: 50px 130px;
+      overflow: hidden;
+      &.turquois {
+        border: 3px solid $turquois;
+        .btn.btn-primary.button-full {
+          @include button-bg($turquois);
+        }
+      }
+      &.purple {
+        border: 3px solid $purple;
+        .btn.btn-primary.button-full {
+          @include button-bg($purple);
+
+        }
+      }
+      &.strawberry {
+        border: 3px solid $strawberry;
+        .btn.btn-primary.button-full {
+          @include button-bg($strawberry);
+
+        }
+      }
+      &.orange {
+        border: 3px solid $orange;
+        .btn.btn-primary.button-full {
+          @include button-bg($orange);
+
+        }
+      }
+      &.blue {
+        border: 3px solid $blue;
+        .btn.btn-primary.button-full {
+          @include button-bg($blue);
+
+        }
+      }
+    }
+    .modal-dialog {
+      max-width: 630px;
+      
+    }
+    input,
+    select,
+    textarea,
+    .custom-form .btn-primary.button-full {
+      margin  : 0 0 30px 0;
+     @include border-reset;
+    }
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 3rem;
+
+  }
+
+
+
+  }
+}

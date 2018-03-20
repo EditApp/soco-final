@@ -1,0 +1,38 @@
+<!DOCTYPE html> {{> head}}
+
+<body class="socotec">
+  <section class="main-content">
+    <div class="sub-content">
+      {{partial "main-header" title="SOCOTEC" portail="true"}} 
+    </div>
+    <div class="blue-band">
+      {{> main-menu}}
+    </div>
+
+    <main>
+      <section class="sub-content">
+          <article class="content">
+            <h1>Détails du contrat</h1>
+            {{> main-content-title-text}}
+          </article>
+          {{> main-content-adress}}
+          <div class="bloc-turquois">
+            <h2 class="h2-titles"><span class="icon icon-mes-prospects "></span>Rendez-vous Associés</h2>
+            {{> main-content-color-table-rdv}}
+          </div>
+          <div class="bloc-orange">
+            <h2 class="h2-titles"><span class="icon icon-devis "></span>Devis</h2>
+            {{> main-content-color-table}}
+          </div>
+          <div class="bloc-strawberry">
+            <h2 class="h2-titles"><span class="icon icon-commandes "></span>Commandes</h2>
+            {{> main-content-color-table}}
+          </div>
+      </section>
+    </main>
+  </section>
+  {{!-- {{> main-footer}}  --}}
+  {{> foot}}
+</body>
+
+</html>

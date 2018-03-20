@@ -1,0 +1,220 @@
+.custom-form {
+ 
+  input,
+  select,
+  textarea {
+    min-height : 34px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin  : 0 30px 30px 0;
+    border: 1px solid $grey-semi;
+    border-radius: 0;
+    font-size: $font-normal;
+    color: $black;
+    width: 100%;
+   @include border-reset;
+  }
+
+  button.chevron {
+    @include button-reset;
+    text-align: right;
+    color: $blue;
+    font-size: $font-normal;
+    &:before {
+      background: #fff url('../images/icons/action-icons/chevrons-blue.svg') no-repeat  right -12px;
+      content: ' ';
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      display: inline-block;
+
+    }
+    &.active {
+      &:before {
+        background: #fff url('../images/icons/action-icons/chevrons-blue.svg') no-repeat  right 6px;
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        display: inline-block;
+  
+      }
+      
+    }
+    &:focus {
+      outline : 0px auto -webkit-focus-ring-color;
+    }
+   
+  }
+  .criteria {
+    text-align: right;
+  }
+  .form-link {
+    color: $black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  //select bg style colors {
+
+    select {
+
+      &.purple{
+        background: #fff url('../images/icons/action-icons/chevrons-purple.svg') no-repeat;
+        background-size: 1em;
+        background-position: right 0.75em center;
+      }
+      &.turquois {
+        background: #fff url('../images/icons/action-icons/chevrons-turquois.svg') no-repeat;
+        background-size: 1em;
+        background-position: right 0.75em center;
+      }
+      &.orange{
+        background: #fff url('../images/icons/action-icons/chevrons-orange.svg') no-repeat;
+        background-size: 1em;
+        background-position: right 0.75em center;
+      }
+      &.strawberry {
+        background: #fff url('../images/icons/action-icons/chevrons-strawberry.svg') no-repeat;
+        background-size: 1em;
+        background-position: right 0.75em center;
+      }
+      &.blue {
+        background: #fff url('../images/icons/action-icons/chevrons-blue.svg') no-repeat;
+        background-size: 1em;
+        background-position: right 0.75em center;
+      }
+
+    }
+  //bootstrap surcharge
+  
+  .btn-primary {
+    margin-bottom: 10px;
+      &.button-full{
+        padding: 10px 6px;
+        width: 100%;
+        @include button-flat-style;
+        font-size: $font-optim;
+        @include border-reset;
+      }
+      &.purple {
+        @include button-bg($purple);
+      }
+      &.blue-dark {
+        @include button-bg($blue-dark);
+      }
+      &.strawberry  {
+        max-width: 100%;
+        @include button-bg($strawberry);
+
+      }
+      &.orange {
+        @include button-bg($orange);
+
+      }
+      &.grey {
+        @include button-bg($grey-light);
+
+      }
+  }
+
+  //checkbox style 
+
+  .custom-checkbox {
+    background-color: $white;
+    .custom-list-checkbox-select {
+      min-height : 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin  : 0 30px 30px 0;
+      border: 1px solid $grey-semi;
+      border-radius: 0;
+      font-size: $font-normal;
+      color: $black;
+      width: 100%;
+      
+
+
+    }
+  }
+
+  //
+
+  .custom-list-checkbox-select  {
+  
+    p {
+      line-height: 50px;
+      margin-bottom: 0px;
+    }
+    &.purple{
+      background: #fff url('../images/icons/action-icons/chevrons-purple.svg') no-repeat right .75rem center;
+    }
+    &.turquois {
+      background: #fff url('../images/icons/action-icons/chevrons-turquois.svg') no-repeat right .75rem center;
+    }
+    &.orange{
+      background: #fff url('../images/icons/action-icons/chevrons-orange.svg') no-repeat right .75rem center;
+    }
+    &.strawberry {
+      background: #fff url('../images/icons/action-icons/chevrons-strawberry.svg') no-repeat right .75rem center; 
+    }
+    &.blue {
+      background: #fff url('../images/icons/action-icons/chevrons-blue.svg') no-repeat right .75rem center;
+    }
+    
+  }
+
+  .custom-list-checkbox  {
+    padding: 0px 30px 30px 30px;
+    &.purple{
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color: $purple;
+        }
+    }
+    &.turquois {
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color: $turquois;
+        }
+    }
+    &.orange{
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color: $orange;
+        }
+    }
+    &.strawberry {
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color: $strawberry;
+        }
+    }
+    &.blue {
+      .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+          background-color: $blue;
+        }
+    }
+  }
+  .custom-checkbox {
+      line-height : 45px;
+      text-indent: 20px;
+      margin-bottom: 10px;
+      label {
+        font-weight: 200;
+        font-size: $font-normal;
+      }
+  }
+  .custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+  }
+  .custom-control-label::before {
+    min-width : 40px;
+    min-height : 40px;
+    border: 1px solid $grey-semi;
+    background-color: $white;
+    
+  }
+  .custom-control-label::after {
+    width: 4rem;
+    height: 4rem;
+  }
+
+
+}

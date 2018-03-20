@@ -1,0 +1,41 @@
+.main-header {
+    // @include temp-border;
+    background-color: $ivory;
+    min-height: 120px;
+    width: 100%;
+    .row {
+        min-height: 120px;
+    }
+    .logo {
+        max-width: 78%;
+    }
+    &.center {
+        background-color: $white;
+        text-align: center;
+        img {
+            width: 500px;
+        }
+    }
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.login {
+    position: relative;
+    padding-top: 30px;
+    border-left: 1px solid $grey-light;
+    border-right: 1px solid $grey-light;
+    p {
+        line-height: $line-height-small;
+    }
+    .arrow {
+        position: absolute;
+        top: 55px;
+        right: 20px;
+        width: 20px;
+        height: 10px;
+        @include icon-chevron;
+    }
+}
