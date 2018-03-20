@@ -1,3 +1,4 @@
+
 {
   "name": "Webnet-poesie",
   "version": "0.1.0",
@@ -25,3 +26,4 @@
     "start": "brunch watch --server"
   }
 }
+
